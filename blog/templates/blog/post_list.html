@@ -2,7 +2,18 @@
     <head> 
        <title> Jordan's blog </title>
     </head>
-  
+<!--
+The use of python code inside an HTML doc. This is possible with the Django --
+  --template system. Very cool
+-->
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text | linebreaks }}</p>
+    </div>
+{% endfor %}
+<!--
 <body>
     <div>
       <h1><a href="">My first post</a></h1>
@@ -19,6 +30,9 @@
       <h3><a href=""> My Third post</a></h3>
       <p>Tis is the third and last post</p>
     </div>
+-->
+
+
 
 </body>
 </html>
